@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="row">
       <h2>twentychat instant section</h2>
       <hr>
@@ -27,4 +27,30 @@
         <button type="button" class="btn btn-success pull-right"  (click)="sendMessage()">Send</button>
       </div>
     </div>
+  </div> -->
+
+
+<div class="">
+  <div class="header">
+    <h2>Global Messages</h2>
+    <a (click)="join()">Join</a>
+    <a (click)="leave()">Leave</a>
+
   </div>
+  <div class="chat-box" >
+    <div *ngFor="let item of messageArray" style="margin: 10px;">
+      <div class="message">
+        <span><strong>{{item.user}} : </strong> {{item.message}}</span>
+
+      </div>
+    </div>
+
+    <div class="enter-message" style="position: fixed;bottom: 33px;">
+      <input type="text" [(ngModel)]="messageText" placeholder="Enter your message.."/>
+      <!-- <a href="#" class="send">Send</a> -->
+      <button type="button" class="btn btn-success pull-right"  (click)="sendMessage()">Send</button>
+
+    </div>
+  </div>
+</div>
+  
