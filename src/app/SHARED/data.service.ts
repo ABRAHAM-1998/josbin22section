@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Observable';
 export class DataService {
   constructor() { }
 
-  private socket = io('https://node-twentytwo.herokuapp.com/api');
+  private socket = io('https://node-twentytwo.herokuapp.com');
 
   joinRoom(data) {
     this.socket.emit('join', data);
